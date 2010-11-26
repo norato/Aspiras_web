@@ -15,10 +15,27 @@ class Exercicio3(models.Model):
     valor2 = models.IntegerField()
     valor3 = models.IntegerField()
 
-class Exercicio7(models.Model):
+class Exercicio4(models.Model):
 
-    valor_prestacao = models.IntegerField()
-    numero_prestacoes = models.IntegerField()
+    valor = models.IntegerField()
+
+class Exercicio5(models.Model):
+
+    taxa_do_imposto = models.IntegerField()
+    custo = models.IntegerField()
+
+class Exercicio6(models.Model):
+
+    hora = models.IntegerField()
+    minuto = models.IntegerField()
+
+class Exercicio8(models.Model):
+
+    numero = models.IntegerField()
+
+class Exercicio9(models.Model):
+
+    numero = models.IntegerField()
 
 class Exercicio10(models.Model):
 

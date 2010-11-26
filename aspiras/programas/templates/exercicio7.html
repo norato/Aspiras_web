@@ -1,48 +1,26 @@
 <html>
   <body>
-
-    <SCRIPT TYPE="text/javascript">
-    <!--
-    function soma_total(Django)
-    {
-    var total = Django.total;
-    if (CircleRadius >= 0)
-       {
-       GeoForm.Circle_circumference.value =  2 * Math.PI * CircleRadius ;
-       GeoForm.Circle_area.value =  Math.PI * Math.pow(CircleRadius, 2) ;
-       }
-    else
-       {
-       GeoForm.Circle_circumference.value =  "";
-       GeoForm.Circle_area.value =  "";
-       }
-    }
-    //-->
-    </SCRIPT>
-<html>
-  <body>
     <form method="post" action="">
      {% csrf_token %}
      {% for field in exercicio7_form %}
-     <div class="field">
-        <div class="field">
-          <div>
-            {{ field.label_tag }}:
-          </div>
-          </div>
-            {{ field }}
-          <div>
-          </div>
-          </div>
-      {% endfor %}
-      <div id="submit">
-        <input type = "submit" value = "Enviar">
-        <input type = "button" OnClick= "soma_total(this.form);" value = "Relatório" >
+     <div class = "field">
+       <div class = "field">
+         <div>
+           {{ field.label_tag }}
+        </div>
       </div>
-       {% if total %}
-        {{ total }}
-       {% endif %}
-     </form>
+        {{ field }}
+      <div>
+      </div>
+    </div>
+    {% endfor %}
+      <div id="submit">
+        <input type="submit" value=" Enviar " />
+      </div>
+      {% if resultado %}
+        {{resultado}}
+      {% endif %}
+    </form>
     <a href="/">Inicio</a>
   </body>
 </html>
