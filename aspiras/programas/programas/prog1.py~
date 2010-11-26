@@ -1,0 +1,6 @@
+class Numero(int):
+
+def teste(self):
+    for i in range(1,self+1):
+        print str(i) * i
+

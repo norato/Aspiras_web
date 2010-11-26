@@ -1,0 +1,10 @@
+# -*- coding:utf-8 -*-
+def somar(valor_1, valor_2, valor_3):
+    return sum([valor_1, valor_2, valor_3])
+
+valor_1 = input("Valor 1: ")
+valor_2 = input("Valor 2: ")
+valor_3 = input("Valor 3: ")
+
+soma = somar(valor_1, valor_2, valor_3)
+print "A soma dos três valores é: %i"%(soma)
