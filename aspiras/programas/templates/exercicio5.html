@@ -1,0 +1,27 @@
+<html>
+  <body>
+    <form method="post" action="">
+     {% csrf_token %}
+     {% for field in exercicio5_form %}
+     <div class = "field">
+       <div class = "field">
+         <div>
+           {{ field.label_tag }}
+        </div>
+      </div>
+        {{ field }}
+      <div>
+      </div>
+    </div>
+    {% endfor %}
+      <div id="submit">
+        <input type="submit" value=" Enviar " />
+      </div>
+      {% if resultado %}
+        {{resultado}}
+      {% endif %}
+    </form>
+    <a href="/">Inicio</a>
+  </body>
+</html>
+
