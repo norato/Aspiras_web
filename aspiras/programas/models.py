@@ -77,9 +77,9 @@ class Exercicio17(models.Model):
 
 class Exercicio18(models.Model):
 
-    frase1 = models.CharField(max_length = '1000')
+    frase = models.CharField(max_length = '1000')
 
 class Exercicio19(models.Model):
 
-    frase = models.CharField(max_length = '1000')
+    frase = models.CharField(max_length = '200')
 

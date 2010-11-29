@@ -6,7 +6,7 @@
 <center>
   <div>
     <b>Programa que calcula valor de venda de um produto dado o imposto e o custo</b>
-  </div>  
+  </div>
   <form method="post" action="">
    {% csrf_token %}
    {% for field in exercicio5_form %}
@@ -28,6 +28,7 @@
       {{resultado}}
     {% endif %}
   </form>
-  <a href="/">Inicio</a>
+  <a href="/">Início</a>
 </center>
 {% endblock conteudo %}
+

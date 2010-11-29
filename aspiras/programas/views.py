@@ -320,7 +320,7 @@ def exercicio18(request):
     if request.method == 'POST':
         exercicio18_form = Exercicio18Form(request.POST)
         if exercicio18_form.is_valid():
-            frase = request.POST.get('frase1')
+            frase = request.POST.get('frase')
             resultado = Palavra(frase).programa18
             return render_to_response(
                 'exercicio18.html',
