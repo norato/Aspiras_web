@@ -3,30 +3,12 @@
 {% block titulo %} - Programa 7{% endblock titulo %}
 
 {% block conteudo %}
+<center>
   <div>
-    <b>Programa para calcular o valor de uma prestação</b>
+    <b>Programa para calcular o valor de uma prestação</b><br>
+    <i>Tivemos problemas para a implementação deste</i>
   </div>
-  <form method="post" action="">
-   {% csrf_token %}
-   {% for field in exercicio7_form %}
-   <div class = "field">
-     <div class = "field">
-       <div>
-         {{ field.label_tag }}
-      </div>
-    </div>
-      {{ field }}
-    <div>
-    </div>
-  </div>
-  {% endfor %}
-    <div id="submit">
-      <input type="submit" value=" Enviar " />
-    </div>
-    {% if resultado %}
-      {{resultado}}
-    {% endif %}
-  </form>
   <a href="/">Inicio</a>
+</center>
 {% endblock conteudo %}
 

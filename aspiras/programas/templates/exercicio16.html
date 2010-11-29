@@ -3,6 +3,7 @@
 {% block titulo %} - Programa 16{% endblock titulo %}
 
 {% block conteudo %}
+<center>
   <div>
     <b>Nome na vertical em escada.</b>
   </div>
@@ -23,15 +24,24 @@
     <div id="submit">
       <input type="submit" value=" Enviar " />
     </div>
-    {% if resultado %}
-      {% for i in resultado %}
-        {% for j in i %}
-          {{ j }}
-        {% endfor %}
+    <center>
+    <table>
+      <tr>
+        <td>
+        {% if resultado %}
+          {% for i in resultado %}
+            {% for j in i %}
+            {{ j }}
+            {% endfor %}
         <br>
-      {% endfor %}
-    {% endif %}
+        {% endfor %}
+        {% endif %}
+        </td>
+    </table>
+    </center>
   </form>
+<center>
 <a href = '/'>Início</a>
+</center>
 {% endblock conteudo %}
 

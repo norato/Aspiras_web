@@ -3,6 +3,7 @@
 {% block titulo %} - Programa 12{% endblock titulo %}
 
 {% block conteudo %}
+  <center>
   <div>
     <b>Desenha moldura.</b>
   </div>
@@ -25,10 +26,11 @@
     </div>
     {% if resultado %}
       {% for x in resultado %}
-        {{ x }}<br>
+        {{ x|safe }}<br>
       {% endfor %}
     {% endif %}
   </form>
-<a href = '/'>Início</a>
+  <a href = '/'>Início</a>
+  </center>
 {% endblock conteudo %}
 

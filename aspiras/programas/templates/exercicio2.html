@@ -3,6 +3,7 @@
 {% block titulo %} - Programa 2{% endblock titulo %}
 
 {% block conteudo %}
+<center>
   <div>
     <b>Programa que imprimir um n decrescente informado pelo usuário. <br>
     Use uma função que receba um valor n inteiro e imprima até a n-ésima linha</b>
@@ -24,7 +25,12 @@
       <div id="submit">
         <input type="submit" value=" Enviar " />
       </div>
-      {% if resultado %}
+       </div>
+    <center>
+    <table>
+      <tr>
+        <td>
+            {% if resultado %}
         {% for lista in resultado %}
           {% for valor in lista %}
             {{valor}}
@@ -32,7 +38,12 @@
         <br>
         {% endfor %}
       {% endif %}
+      </td>
+    </table>
+    </center>
     </form>
+    <center>
     <a href="/">Inicio</a>
+    </center>
 {% endblock conteudo %}
 

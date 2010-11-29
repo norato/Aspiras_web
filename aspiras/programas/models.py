@@ -28,6 +28,8 @@ class Exercicio6(models.Model):
 
     hora = models.IntegerField()
     minuto = models.IntegerField()
+class Exercicio7(models.Model):
+    pass
 
 class Exercicio8(models.Model):
 

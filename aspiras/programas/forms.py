@@ -1,6 +1,10 @@
 from django import forms
-from models import Exercicio1, Exercicio2, Exercicio3, Exercicio4, Exercicio5, Exercicio6, Exercicio8, Exercicio9, Exercicio10, Exercicio11, Exercicio12, Exercicio13, Exercicio14, Exercicio15, Exercicio16, Exercicio17, Exercicio18, Exercicio19
-#                    , Exercicio7,
+from models import Exercicio1, Exercicio2, Exercicio3, Exercicio4, \
+                    Exercicio5, Exercicio6, Exercicio7, Exercicio8, \
+                    Exercicio9, Exercicio10, Exercicio11, Exercicio12,\
+                    Exercicio13, Exercicio14, Exercicio15, Exercicio16, \
+                    Exercicio17, Exercicio18, Exercicio19
+                    
 
 class Exercicio1Form(forms.ModelForm):
     class Meta:
@@ -32,10 +36,10 @@ class Exercicio6Form(forms.ModelForm):
 
         model = Exercicio6
 
-#class Exercicio7Form(forms.ModelForm):
-#    class Meta:
+class Exercicio7Form(forms.ModelForm):
+    class Meta:
 
-#        model = Exercicio7
+        model = Exercicio7
 
 class Exercicio8Form(forms.ModelForm):
     class Meta:

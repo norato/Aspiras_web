@@ -182,7 +182,7 @@ class Medida(int):
         lista_horizontal, lista_vertical = [], []
         lista_horizontal.append('+' + '-' * horizontal * 2 + '+')
         for i in range(vertical):
-            lista_vertical.append(' |' + ('.'  * horizontal * 2) + '|')
+            lista_vertical.append(' |' + ("&nbsp;"  * horizontal * 2) + '|')
         lista_final = lista_horizontal + lista_vertical + lista_horizontal
         return lista_final
 

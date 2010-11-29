@@ -1,8 +1,11 @@
 from django.shortcuts import render_to_response
 from django.template import RequestContext
 from forms import Exercicio1Form, Exercicio2Form, Exercicio3Form, \
-                    Exercicio4Form, Exercicio5Form, Exercicio6Form, Exercicio8Form, Exercicio9Form, Exercicio10Form, Exercicio11Form, Exercicio12Form, Exercicio13Form, Exercicio14Form, Exercicio15Form, Exercicio16Form, Exercicio17Form, Exercicio18Form, Exercicio19Form
-#                    Exercicio7Form,
+                    Exercicio4Form, Exercicio5Form, Exercicio6Form,\
+                    Exercicio7Form, Exercicio8Form, Exercicio9Form,\
+                    Exercicio10Form, Exercicio11Form, Exercicio12Form,\
+                    Exercicio13Form, Exercicio14Form, Exercicio15Form,\
+                    Exercicio16Form, Exercicio17Form, Exercicio18Form, Exercicio19Form
 from programas.exe1 import Numero, Data, Dinheiro, Medida, Palavra
 
 
@@ -123,6 +126,10 @@ def exercicio6(request):
             {'exercicio6_form': exercicio6_form},
             context_instance=RequestContext(request)
             )
+def exercicio7(request):
+    return render_to_response(
+        'exercicio7.html'
+        )
 
 def exercicio8(request):
     exercicio8_form = Exercicio8Form()

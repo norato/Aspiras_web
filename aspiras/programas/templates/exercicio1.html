@@ -3,8 +3,9 @@
 {% block titulo %} - Programa 1{% endblock titulo %}
 
 {% block conteudo %}
+  <center>
   <div>
-    <b>Programa que imprimir um n crescente informado pelo usuário. <br>
+    <b>Programa que imprimi um n crescente informado pelo usuário. <br>
     Use uma função que receba um valor n inteiro e imprima até a n-ésima linha</b>
   </div>  
   <form method="post" action="">
@@ -24,6 +25,10 @@
     <div id="submit">
       <input type="submit" value="Enviar" />
     </div>
+    <center>
+    <table>
+      <tr>
+        <td>
     {% if resultado %}
       {% for lista in resultado %}
          {% for valor in lista %}
@@ -31,6 +36,11 @@
          {% endfor %}
       {% endfor %}
     {% endif %}
+    </td>
+    </table>
+    </center>
   </form>
+  <center>
   <a href="/">Inicio</a>
+  </center>
 {% endblock conteudo %}
