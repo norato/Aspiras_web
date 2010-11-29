@@ -1,5 +1,6 @@
+# -*- coding: utf-8 -*-
 class Numero(int):
-    
+
     @property
     def programa1(self):
         lista = []
@@ -29,13 +30,13 @@ class Numero(int):
 
     def programa3(self, valor1, valor2, valor3):
         return sum([valor1, valor2, valor3])
-    
+
     @property
     def programa4(self):
         if (self > 0):
             return "Positivo"
         return "Negativo"
- 
+
 
     def programa6(self, minuto):
         hora = self
@@ -90,4 +91,98 @@ class Dinheiro(float):
         valor_imposto = (taxa_imposto / 100.) * custo
         return self.custo + valor_imposto
 
+class Palavra(str):
+
+
+    @property
+    def programa11(self):
+        import random
+        palavra_embaralhada = ''
+        palavra_normal = map(str, self)
+        while palavra_normal != []:
+            letra = random.choice(palavra_normal)
+            palavra_embaralhada += letra
+            palavra_normal.remove(letra)
+        return palavra_embaralhada
+
+    def programa13(self, palavra2):
+        palavra1 = self
+        if len(palavra1) != len(palavra2):
+            tamanho = "Diferentes"
+        else:
+            tamanho = "Iguais"
+        if tamanho == "Diferentes":
+            conteudo = "Diferentes"
+        else:
+            for i in range(len(palavra1)):
+                if palavra1[i] != palavra2[i]:
+                    conteudo = "Diferentes"
+                    break
+                else:
+                    conteudo = "Iguais"
+        return tamanho, conteudo
+
+    @property
+    def programa14(self):
+        nome_invertido = ''.join(self[::-1]).upper()
+        return nome_invertido
+
+    @property
+    def programa15(self):
+        return map(str, self)
+
+    @property
+    def programa16(self):
+        palavra = self
+        lista = []
+        for i in range(len(palavra)):
+            lista.append(range(0))
+        for i in range(len(palavra)):
+            lista[i].append(palavra[:i + 1])
+        return lista
+
+    @property
+    def programa17(self):
+        palavra = self
+        lista = []
+        for i in range(len(palavra)):
+            lista.append(range(0))
+        for i in range(len(palavra) - 1, -1, -1):
+            lista[i].append(palavra[:len(palavra)-i])
+        return lista
+
+    @property
+    def programa18(self):
+        palavra = self
+        espacos = palavra.count(' ')
+        vogal_a = palavra.count('a')
+        vogal_e = palavra.count('e')
+        vogal_i = palavra.count('i')
+        vogal_o = palavra.count('o')
+        vogal_u = palavra.count('u')
+        return espacos, vogal_a, vogal_e, vogal_i, vogal_o, vogal_u
+
+    @property
+    def programa19(self):
+        palavra = self
+        palavra_auxiliar = ''
+        for letra in palavra:
+            if (letra != ' ') and (letra != ',') and (letra != '-'):
+                palavra_auxiliar += letra
+        palavra = palavra_auxiliar
+        palavra_invertida = palavra[::-1]
+        if palavra == palavra_invertida:
+            return 'É palíndromo'
+        return 'Não é palíndromo'
+
+class Medida(int):
+
+    def programa12(self, vertical):
+        horizontal = self
+        lista_horizontal, lista_vertical = [], []
+        lista_horizontal.append('+' + '-' * horizontal * 2 + '+')
+        for i in range(vertical):
+            lista_vertical.append(' |' + ('.'  * horizontal * 2) + '|')
+        lista_final = lista_horizontal + lista_vertical + lista_horizontal
+        return lista_final
 

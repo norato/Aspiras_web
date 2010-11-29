@@ -1,14 +1,14 @@
 {% extends "base.html"%}
 
-{% block titulo %} - Programa 10{% endblock titulo %}
+{% block titulo %} - Programa 12{% endblock titulo %}
 
 {% block conteudo %}
   <div>
-    <b>Data com mês por extenso.</b>
+    <b>Desenha moldura.</b>
   </div>
   <form method="post" action="">
    {% csrf_token %}
-   {% for field in exercicio10_form %}
+   {% for field in exercicio12_form %}
    <div class="field">
       <div class="field">
         <div>
@@ -24,8 +24,11 @@
       <input type="submit" value=" Enviar " />
     </div>
     {% if resultado %}
-      <p>{{ resultado }}</p>
+      {% for x in resultado %}
+        {{ x }}<br>
+      {% endfor %}
     {% endif %}
   </form>
-  <a href="/">Inicio</a>
+<a href = '/'>Início</a>
 {% endblock conteudo %}
+

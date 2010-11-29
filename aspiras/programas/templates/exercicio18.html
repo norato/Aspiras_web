@@ -1,0 +1,46 @@
+{% extends "base.html"%}
+
+{% block titulo %} - Programa 18{% endblock titulo %}
+
+{% block conteudo %}
+  <div>
+    <b>Conta espaços e vogais.</b>
+  </div>
+  <form method="post" action="">
+   {% csrf_token %}
+   {% for field in exercicio18_form %}
+   <div class="field">
+      <div class="field">
+        <div>
+          {{ field.label_tag }}:
+        </div>
+        </div>
+          {{ field }}
+        <div>
+        </div>
+        </div>
+    {% endfor %}
+    <div id="submit">
+      <input type="submit" value=" Enviar " />
+    </div>
+    <table>
+      <tr>
+        <td>
+          {% if resultado %}
+            Espaços:<br>
+            Vogal a:<br>
+            Vogal e:<br>
+            Vogal i:<br>
+            Vogal o:<br>
+            Vogal u:<br>
+          {% endif %}
+        </td>
+        <td>
+          {% for i in resultado %}
+            {{ i }}<br>
+          {% endfor %}
+        </td>
+    </table>
+  </form>
+<a href = '/'>Início</a>
+{% endblock conteudo %}

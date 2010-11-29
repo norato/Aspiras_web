@@ -1,31 +1,36 @@
-<html>
-  <body>
-    <form method="post" action="">
-     {% csrf_token %}
-     {% for field in exercicio1_form %}
-     <div class="field">
-        <div class="field">
-          <div>
-            {{ field.label_tag }}:
-          </div>
-          </div>
-            {{ field }}
-          <div>
-          </div>
-          </div>
-      {% endfor %}
-      <div id="submit">
-        <input type="submit" value=" Enviar " />
-      </div>
-      {% if resultado %}
-        {% for lista in resultado %}
-           {% for valor in lista %}
-              <div>{{ valor }}</div>
-           {% endfor %}
-        {% endfor %}
-      {% endif %}
-    </form>
-    <a href="/">Inicio</a>
-  </body>
-</html>
+{% extends "base.html"%}
 
+{% block titulo %} - Programa 1{% endblock titulo %}
+
+{% block conteudo %}
+  <div>
+    <b>Programa que imprimir um n crescente informado pelo usuário. <br>
+    Use uma função que receba um valor n inteiro e imprima até a n-ésima linha</b>
+  </div>  
+  <form method="post" action="">
+   {% csrf_token %}
+   {% for field in exercicio1_form %}
+   <div class="field" style="center">
+      <div class="field">
+        <div>
+          {{ field.label_tag }}:
+        </div>
+        </div>
+          {{ field }}
+        <div>
+        </div>
+        </div>
+    {% endfor %}
+    <div id="submit">
+      <input type="submit" value="Enviar" />
+    </div>
+    {% if resultado %}
+      {% for lista in resultado %}
+         {% for valor in lista %}
+            <div>{{ valor }}</div>
+         {% endfor %}
+      {% endfor %}
+    {% endif %}
+  </form>
+  <a href="/">Inicio</a>
+{% endblock conteudo %}

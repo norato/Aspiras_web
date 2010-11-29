@@ -1,5 +1,10 @@
-<html>
-  <body>
+{% extends "base.html"%}
+
+{% block titulo %} - Programa 3{% endblock titulo %}
+
+{% block conteudo %}
+  <div>
+    <b>Programa que fornece a soma de três argumentos.</b>
     <form method="post" action="">
      {% csrf_token %}
      {% for field in exercicio3_form %}
@@ -22,6 +27,5 @@
       {% endif %}
     </form>
     <a href="/">Inicio</a>
-  </body>
-</html>
+{% endblock conteudo %}
 

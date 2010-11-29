@@ -43,3 +43,41 @@ class Exercicio10(models.Model):
     mes = models.IntegerField()
     ano = models.IntegerField()
 
+class Exercicio11(models.Model):
+
+    palavra = models.CharField(max_length ='200')
+
+class Exercicio12(models.Model):
+
+    medida1 = models.IntegerField()
+    medida2 = models.IntegerField()
+
+class Exercicio13(models.Model):
+
+    palavra1 = models.CharField(max_length ='1000')
+    palavra2 = models.CharField(max_length ='1000')
+
+class Exercicio14(models.Model):
+
+    nome = models.CharField(max_length = '200')
+
+class Exercicio15(models.Model):
+
+    nome = models.CharField(max_length = '200')
+
+class Exercicio16(models.Model):
+
+    nome = models.CharField(max_length = '200')
+
+class Exercicio17(models.Model):
+
+    nome = models.CharField(max_length = '200')
+
+class Exercicio18(models.Model):
+
+    frase1 = models.CharField(max_length = '1000')
+
+class Exercicio19(models.Model):
+
+    frase = models.CharField(max_length = '1000')
+

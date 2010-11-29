@@ -1,5 +1,12 @@
-<html>
-  <body>
+{% extends "base.html"%}
+
+{% block titulo %} - Programa 2{% endblock titulo %}
+
+{% block conteudo %}
+  <div>
+    <b>Programa que imprimir um n decrescente informado pelo usuário. <br>
+    Use uma função que receba um valor n inteiro e imprima até a n-ésima linha</b>
+  </div>  
     <form method="post" action="">
      {% csrf_token %}
      {% for field in exercicio2_form %}
@@ -27,6 +34,5 @@
       {% endif %}
     </form>
     <a href="/">Inicio</a>
-  </body>
-</html>
+{% endblock conteudo %}
 
